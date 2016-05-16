@@ -2,82 +2,7 @@
 <html>
 <head>
 <title>menu</title>
-<style>
-ul{
-    margin: 0;
-    padding:0;
-    list-style-type: none; 
-}
-.menu{
-    box-shadow: 0 5px 15px rgba(0,0,0,.5);
-    width:240px;
-    color:#333;
-    font-size: 13px;
-}
-.menu-title{
-    background: #FF6C00;
-    color:white;
-    text-align: center;    
-    padding: 2px;
-    margin:0;
-    font-weight: 700;
-    font-size: 16px;
-}
-
-.menu-item{
-    padding:2px 0 2px 12px;
-    background-color: white;
-    position: relative;
-}
-.menu-item-hover{
-    color:white;
-    background: #FF6C00;
-}
-
-.menu-item-hover .menu-item-left  a{
-    color: white;
-}
-
-.menu-item-title{
-    margin: 0px;
-    font-weight: 700;
-    font-size:14px;
-}
-.menu-item-a  a{
-    font-size:12px;
-    text-decoration: none;
-    color: #666;    
-}
-.menu-item-pop{
-    position: absolute;
-    left:240px;
-    top:0;
-    width: 600px;
-    background-color: white;
-    border:1px solid #FF6C00;
-    display: none;
-}
-.pop-item-title{border-bottom: 2px solid #666;padding:5px;color:#333;}
-.pop-item-list{padding: 2px;}
-.pop-layer li.pop-item{
-    float: left;
-    width: 180px;
-    padding:5px 10px;
-}
-.pop-item-list a{
-    font-size:12px;
-    text-decoration: none;
-    color: #333;
-    display: inline-block;
-    margin:2px;
-    padding:0 8px 0 2px;
-    border-right:1px solid #EAEAEA;
-    height: 15px;
-    line-height: 15px;
-    text-align: center;
-}
-.clear{clear: both;}
-</style>
+<link rel="stylesheet" type="text/css" href="../css/menu.css">
 </head>
 <body>
 <div class="menu">
@@ -120,12 +45,10 @@ ul{
     <a href="javascript:void(0);"><%=data[i]%></a>
 <%}%>
 </script>
-<script src="vendor/jquery-1.12.3.js"></script>
-<script src="vendor/template-native.js"></script>
+<script src="../vendor/jquery-1.12.3.js"></script>
+<script src="../vendor/template-native.js"></script>
 <script>
 var menu_render = template.compile($('#menu').html());
-
-'/data/menu.json'
 $.ajax({
    url:'/data/menu.json',
    type:'get',

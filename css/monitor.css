@@ -1,0 +1,88 @@
+body{
+    height: 100%;
+    background-color: #2f4050;
+}
+.col-lg-2,.col-lg-10{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#dashboard .nav-pills > li > a{
+    border-radius:0;
+    font-weight:600;
+    color: #a7b1c2;
+    background: inherit;
+}
+#dashboard .nav-pills > li > a:hover{
+    background: #293846;
+}
+
+#dashboard .nav-pills >li.active >a{
+    border-left: 4px solid #19aa8d;
+    background: #293846;
+}
+
+#dashboard .navbar{
+    border-top:0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+}
+#dashboard .menu{
+}
+#dashboard .menu .navbar-default{
+    border-color:inherit;
+    background-color: inherit
+}
+#dashboard .app{
+    background-color: #f3f3f4;
+}
+
+.metrics{
+    padding: 10px 0;
+}
+.metrics .row{
+    margin-left: 0;
+    margin-right:0;
+}
+#dashboard .panel-default{
+    border:0;
+    border-radius: 0;
+}
+#dashboard .panel-default > .panel-heading{
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid;
+    border-width: 4px 0 1px 0;
+    border-radius: 0;
+    background-color: inherit;
+}
+.prw-navbar{
+    margin-bottom: 10px;
+}
+.nav-header{
+    padding: 15px;
+    color: #DFE4ED;
+    border-bottom:1px #293846 solid;
+}
+.nav-header > h3 > a{
+    font-size: 14px;
+}
+
+#dashboard .panel-body{
+    padding: 1px;
+}
+.log-table{
+    margin-bottom: 0px;
+    color: #555;
+}
+.log-table > tbody >tr.first-line > td{
+    border-top: 0 none;
+}
+
+.controls{
+    margin-bottom: 10px;
+    text-align: right;
+}
+.controls > button{
+    margin:0 5px;
+}

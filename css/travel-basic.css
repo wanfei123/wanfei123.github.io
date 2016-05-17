@@ -35,7 +35,8 @@ a {
 #header .logo {
 	width: 240px;
 	height: 70px;
-	margin: 50;
+	margin:0 30px;
+	line-height: 70px;
 	color: #fff;
 	vertical-align: center;
 	top:10px;
@@ -116,3 +117,4 @@ a {
 	background-color: #005C99;
 	border-top: 1px solid #444;
 }
+

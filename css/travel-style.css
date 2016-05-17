@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+#banner{
+	width: 100%;
+	min-width: 1210px;
+	height:210px;
+	/*background: url(../img/search.jpg) no-repeat center;*/
+	position: relative;
+	vertical-align: center;
+	margin: 0 60px 30px 60px;
+} 
+.banner{
+	width:1210px;
+	height:210px;
+	float:left;
+	margin:10 auto;
+	position:relative;
+}
+.banner img{
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+.banner ul{
+	position:absolute;
+	top:158px;
+	left:48%;
+	font-size:16px;
+	color:#999;
+	z-index:4;
+}
+.banner ul li{
+	float:left;
+	padding:0 5px;
+	color:#999;
+	cursor:pointer;
+}
+.banner span{
+	width:1210px;
+	height:25px;
+	position:absolute;
+	top:185px;
+	left:0;
+	background:#333;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+	z-index:3;
+}
+.banner strong{
+	position:absolute;
+	top:185px;
+	left:10px;
+	color:#fff;
+	z-index:4;
+}
+
+
+#tour {
+	width: 1263px;
+	height: 1150px;
+	/*background-color: #ccc;*/
+	margin: 30px auto;
+	text-align: center;
+}
+#tour .center h2 {
+	font-size: 45px;
+	letter-spacing: 2px;
+	color: #666;
+	margin: 10px 0;
+}
+#tour .center p {
+	color: #59b200;
+	margin: 10px 0;
+}
+#tour figure {
+	border: 1px solid #ddd;
+	display: inline-block;
+	padding: 4px;
+	border-radius: 4px;
+	margin: 15px 12px;
+	width: 380px;
+	text-align: left;
+	position: relative;
+}
+#tour figure img {
+	vertical-align: middle;
+}
+#tour figcaption {
+	color: #777;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	font-size: 14px;
+	padding: 7px 0 5px 0;
+}
+#tour .info {
+	padding: 5px 0 0 0;
+}
+#tour .title {
+	color: #333;
+	font-weight: normal;
+}
+#tour .sat {
+	float: right;
+	font-size: 13px;
+	color: #999;
+	font-style: normal;
+	position: relative;
+	top: 5px;
+	right: 5px;
+}
+#tour .price {
+	color: red;
+	font-size: 14px;
+}
+#tour .price strong {
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+#tour .type {
+	width: 90px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	background-color: #59b200;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}

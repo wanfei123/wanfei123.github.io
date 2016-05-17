@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<title>menu</title>
+<link rel="stylesheet" type="text/css" href="../css/menu.css">
+</head>
+<body>
+<div class="menu">
+<div class="menu-title">全部商品分类</div>
+<ul class="menu-list" id="menu-container">
+</ul>
+</div>
+<script id="menu" type="text/html">
+<%for(i = 0; i < data.length; i++) {%>
+   <li class="menu-item">
+        <h3 class="menu-item-title"><%=data[i].title%></h3>
+        <div class="menu-item-a">
+            <div class="menu-item-left"><% include('menu-item',{data:data[i].items})  %></div>
+            <div class="menu-item-pop">
+                <ul class="pop-layer">
+                <% include('pop-item',{data:data[i].pop})  %>  
+                <ul>        
+            </div>
+        </div>
+  </li>
+<%}%>
+</script>
+<script id="menu-item" type="text/html">
+<%for(i = 0; i < data.length; i++) {%>
+    <a href="javascript:void(0);"><%=data[i]%></a>
+<%}%>
+</script>
+<script id="pop-item" type="text/html">
+<%for(i = 0; i < data.length; i++) {%>
+<li class="pop-item">
+    <div class="pop-item-title"><strong><%=data[i].title%></strong></div>
+     <div class="pop-item-list">
+         <% include('pop-item-children',{data:data[i].items}) %>
+     </div>
+</li>
+<%}%>
+</script>
+<script id="pop-item-children" type="text/html">
+<%for(i=0;i<data.length;i++){%>
+    <a href="javascript:void(0);"><%=data[i]%></a>
+<%}%>
+</script>
+<script src="../vendor/jquery-1.12.3.js"></script>
+<script src="../vendor/template-native.js"></script>
+<script>
+var menu_render = template.compile($('#menu').html());
+$.ajax({
+   url:'/data/menu.json',
+   type:'get',
+   dataType:'json',
+   data:{p:1},
+   success:function(data){
+        $('#menu-container').html(menu_render({data:data}));
+        $('.menu-item').hover(function(){
+            var me = $(this);
+            me.addClass('menu-item-hover');
+            me.find('.menu-item-pop').show();
+        },function(){
+            var me = $(this);
+            me.removeClass('menu-item-hover');
+            me.find('.menu-item-pop').hide();
+        });
+   },
+   error:function(){
+        alert("数据加载失败");
+   }
+});
+
+</script>
+</body>
+</html>

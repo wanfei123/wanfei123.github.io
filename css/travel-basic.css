@@ -35,12 +35,10 @@ a {
 #header .logo {
 	width: 240px;
 	height: 70px;
-	margin:0 30px;
-	line-height: 70px;
-	color: #fff;
-	vertical-align: center;
-	top:10px;
+	background: url(../img/logo.png);
+	text-indent: -9999px;
 	float: left;
+
 }
 #header .link {
 	width: 650px;

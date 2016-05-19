@@ -6,7 +6,7 @@
     display: block;
     float: left;
     text-decoration: none;
-    width: 305px;
+    width: 238px;
     height: 185px;
     margin: 15px;
     font-size: 14px;
@@ -30,6 +30,9 @@
 }
 .showcase-header-3{
   background: #f60;  
+}
+.showcase-header-4{
+  background: red;  
 }
 .showcase-content{
     margin: 0 10px;
